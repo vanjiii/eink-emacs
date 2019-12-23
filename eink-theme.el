@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-(deftheme eink
+(deftheme my-eink
   "Theme emulating reading on an E Ink device.")
 
 (let ((fg "#111111")
@@ -43,11 +43,12 @@
       (bg-light "#ddddd8")
       (fg-light "#ddddd8")
       (bg-highlight "#FFF1AA")
+      (xx "#ff00f2")
       (bg-highlight-2 "LightCyan")
       (bg-highlight-3 "LightGreen"))
 
   (custom-theme-set-faces
-   'eink
+   'my-eink
 
    ;; generic stuff
    `(default ((t (:background ,bg :foreground ,fg))))
@@ -62,16 +63,16 @@
    `(font-latex-string-face ((t (:foreground "#a9a9a9"))))
    `(font-lock-builtin-face ((t (:background ,bg :foreground ,fg))))
    `(font-lock-comment-delimiter-face ((t (:foreground "#808080"))))
-   `(font-lock-comment-face ((t (:foreground ,fg :weight bold))))
+   `(font-lock-comment-face ((t (:foreground ,"#808080"))))
    `(font-lock-constant-face ((t (:foreground ,fg))))
-   `(font-lock-doc-face ((t (:foreground ,fg :weight semi-bold))))
    `(font-lock-function-name-face ((t (:foreground ,fg))))
+   `(font-lock-doc-face ((t (:foreground ,"#808080"))))
    `(font-lock-keyword-face ((t (:foreground ,fg))))
    `(font-lock-preprocessor-face ((t (:foreground ,fg))))
    `(font-lock-reference-face ((t (:foreground ,fg))))
    `(font-lock-string-face ((t (:foreground ,fg))))
    `(font-lock-type-face ((t (:foreground ,fg))))
-   `(font-lock-variable-name-face ((t (:foreground ,fg :underline nil))))
+   `(font-lock-variable-name-face ((t (:foreground ,fg))))
    `(font-lock-warning-face ((t (:foreground ,fg :weight bold))))
    `(fringe ((t (:background ,bg :foreground ,bg))))
    `(gnus-header-content ((t (:foreground ,fg))))
@@ -82,17 +83,17 @@
    `(ido-first-match ((t (:foreground ,fg))))
    `(ido-only-match ((t (:foreground ,fg))))
    `(ido-subdir ((t (:foreground ,fg))))
-   `(isearch ((t (:background "#eeeee8" :foreground ,fg))))
+   `(isearch ((t (:background "#e6e6da" :foreground ,fg))))
    `(link ((t (:foreground ,fg))))
    `(minibuffer-prompt ((t (:foreground ,fg :weight bold))))
-   `(mode-line ((t (:background ,bg-light :foreground ,fg :height 0.8))))
+   `(mode-line ((t (:background ,bg-light :foreground ,fg))))
    `(mode-line-buffer ((t (:foreground ,fg :weight bold))))
-   `(mode-line-inactive ((t (:background ,bg-light :foreground ,fg :height 0.8))))
+   `(mode-line-inactive ((t (:background ,bg-light :foreground ,fg))))
    `(mode-line-minor-mode ((t (:weight ultra-light))))
    `(modeline ((t (:background ,bg :foreground ,fg :height 0.8))))
    `(region ((t (:background "#eeeee8" :foreground ,fg))))
    `(slime-repl-inputed-output-face ((t (:foreground ,fg))))
-   `(whitespace-line ((t (:background ,bg-highlight-2 :foreground ,fg))))
+   `(whitespace-line ((t (:background ,bg-highlight-2 :foregrzenburn-ound ,fg))))
 
    ;; org
    `(org-agenda-date ((t (:foreground ,fg :height 1.2))))
@@ -237,6 +238,13 @@
    `(evil-snipe-first-match-face ((t (:foreground ,fg :background "#eeeee8"))))
    `(evil-snipe-matches-face ((t (:foreground ,fg :background ,bg-highlight-3))))
 
+   ;; golang
+   `(go-guru-hl-identifier-face ((t (:weight bold))))
+
+   ;; ivy
+   `(ivy-current-match ((t (:weight bold :underline t))))
+   `(ivy-minibuffer-match-face-2 ((t (:background ,"#e6e6da"))))
+
    ;; evil
    `(evil-ex-lazy-highlight ((t (:background ,bg-highlight-2))))
    `(evil-ex-substitute-matches ((t (:background ,bg-highlight-2))))
@@ -248,5 +256,5 @@
    'custom-theme-load-path
    (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'eink)
+(provide-theme 'my-eink)
 ;;; eink-theme.el ends here
