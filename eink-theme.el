@@ -43,6 +43,7 @@
       (bg-light "#ddddd8")
       (fg-light "#ddddd8")
       (bg-highlight "#FFF1AA")
+      ;; for debug purposes
       (xx "#ff00f2")
       (bg-highlight-2 "LightCyan")
       (bg-highlight-3 "LightGreen"))
@@ -122,10 +123,6 @@
    `(org-todo ((t (:foreground ,fg))))
    `(org-verse ((t (:inherit org-block :slant italic))))
    `(org-table ((t (:foreground ,fg-table))))
-
-   ;; powerline
-   `(powerline-active1 ((t (:background "grey22" :foreground ,bg :inherit mode-line))))
-   `(powerline-active2 ((t (:background "grey40" :foreground ,bg :inherit mode-line))))
 
    ;; magit
    `(magit-header ((t (:weight semi-bold))))
@@ -216,7 +213,7 @@
 
    ;; linum / nlinum-relative
    `(nlinum-relative-current-face ((t (:inherit normal :weight bold))))
-   `(linum ((t (:inherit normal :weight bold))))
+   `(linum ((t (:foreground ,fg))))
 
    ;; web-mode
    `(web-mode-current-element-highlight-face ((t (:inherit normal :weight bold :foreground ,fg))))
